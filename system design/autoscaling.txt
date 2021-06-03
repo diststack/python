@@ -1,0 +1,17 @@
+Autoscaling:
+
+
+Min size
+max size
+desired capacity
+launch configurqation: is temaplate used by Autoscaling group for adding new instances to the group.
+    below are the details to lanunch new instance in auto scaling 
+    details: 
+            {
+                "AMI <>machine image>data":  "linux"
+                "security groups":
+                "EBSS volume size and volume type":
+                "IAM ROle":
+                "private key to ssh":
+                
+            }

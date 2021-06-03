@@ -1,0 +1,81 @@
+scripting usecases:
+
+check for hosts file exits 
+/etc/hosts
+
+bash
+#!/bin/bash
+if [ -e /etc/hosts]
+then
+    echo hosts file exits
+else
+    echo no hosts file exits
+fi
+
+
+python:
+#!/usr/bin/python3
+import os.path
+if os.path.exits('/etc/hosts'):
+    print('hosts file exits')
+else:
+    print ('no hosts file exits')
+
+try:
+    f = open('/etc/hosts')
+    print('hosts file exits')
+except FileNotFoundError:
+    print ('not hosts file')
+
+Usecase2:
+find the largest userID in the password file
+
+bash
+sort -n -t: -k3 /etc/passwd | tail -1 | cut -d: -f3
+
+python3
+#!/usr/bin/env python3
+maxuid = 0
+for line in open('/etc/passwd'):
+    split = line.split(':')
+    if int(split[2]) > maxuid:
+        maxuid = int(split[2])
+    
+    print(maxuid)
+
+
+usecase 3: FILES that dont have owner 
+
+import os
+
+uidset = set ()
+
+for line in open ('/etc/passwd'):
+    spilt = line.spilt(':')
+    uidset.add(int(spilt[2]))
+
+or 
+
+import pwd
+for user in pwd.getpwall:
+    uidset.add(user.pw_uid)
+
+testdir = '/home'
+for folders, dirs, files in os.walk(testdir):
+
+    for file in files:
+        path = folder + '/' + file
+        
+        if os.path.islink(path):
+            continue
+
+        try:
+        attr = os.stat(path)
+        except FileNotFoundError:
+            continue
+
+        if attr.st_uid not in uidset:
+            print(path + 'ha no owner')
+
+
+

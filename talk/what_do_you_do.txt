@@ -1,0 +1,36 @@
+
+what's day to day work at cerner?
+
+
+    sure, Let me tell what our team do, then I'll talk about my responsibilities.
+
+    Cerner is health care it, from the software used in hospital to the insurance financials in the background.
+    
+    what our team does? we give the clinets to write there write/update rules. Basically a rules engine. 
+
+    After that we deliver some standalone tools for clients. and to support this we have some web services running in the background.
+
+
+    so we delever some standaalnoetools to clients and deploy web services.
+
+    here comes our responsibilities:
+
+    we deliver this stand alone tools  using CHEF and deploy web services with the help containerazation.in AWS. 
+
+    there are a few tools which are used by clients like:
+
+    Tibco  Bisuness events which is complete built on Eclipse.
+    kibana to check the outputs
+    and a web application to deploy the modified application
+
+
+    and web services are straight frwd. its a spring boot application. we build docker images and 
+    push them to AWS whicha are in elastic container services. These are deployed in multiple avalibility zones in a private subnet.
+    These services are horizontally scaled based on the metrics of CPU usage and some other factors.
+
+    
+
+
+    
+    
+

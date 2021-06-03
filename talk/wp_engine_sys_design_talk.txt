@@ -1,0 +1,44 @@
+
+Topics to talk:
+    auto-scaling
+    self healing
+    service discovery 
+
+
+
+
+Jenkins Orchestrating pipeline:
+
+    1. jenkins file source code
+
+
+
+Cloud Formation:
+
+    ECS  env on EC2 servers:
+
+
+    Health checks:
+    Application load balancer
+
+
+rollover updates vs blue green deployments:
+
+
+
+ECS Terminology:
+
+    Clusters: group of container instances in an AWS region 
+
+
+    Tasks: define what docker container should be launced on an EC2 instnace 
+    services: defines the desired number of tasks/container to run simultaneously in an ECS cluster
+    container agent: registers an EC2 instance to an ECS cluster
+    container instances: EC2 instances registered to an ECS cluster
+    
+    application load balancing:
+
+
+
+
+
